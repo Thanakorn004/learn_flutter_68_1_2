@@ -34,6 +34,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_spinkit: ^5.2.2 
+  connectivity_plus: ^7.3.1
+  fluttertoast: ^10.0.0
 
 dev_dependencies:
   flutter_test:
@@ -46,16 +49,19 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
 
-  flutter_launcher_icons: ^0.14.4
+  # Step 1 Install icon app
+  flutter_launcher_icons: "^0.14.4"
 
-  flutter_launcher_icon: 
-    android: "launcher_icon",
-    ios: true
-    Remove_alpha.ios: true
-    image_path: "android/assent/icon/logo.png"
-    adaptive_icon_background: "#FFFFFF"
-    adaptive_icon_background: "android/assent/icon/logo.png"
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  Remove_alpha_ios: true
+  image_path: "android/assets/icon/OIP (1).webp"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "android/assets/icon/OIP (1).webp"
+
+  #หลังจากนำภาพเข้าโปรเจคแล้ว ให้ใช้คำสั่ง dart run flutter_launcher_icons
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -72,6 +78,9 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+   - ./android/assets/icon/
+   - ./android/assets/image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
